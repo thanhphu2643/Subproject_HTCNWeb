@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartphonethoidai</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/style2.css">
+</head>
+<body>
+  <header>
+    <div class="header-box">
+        <!-- navigation bar -->
+        <IMG src="../IMG/logo.png">
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./Giaodienchinh.html">TRANG CHỦ</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./SanPham.html">SẢN PHẨM</a>
+                    <div class="nav-bar__dropdown-icon">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <!-- sub-nav của sản phẩm -->
+                    <ul class="sub-nav__list">
+                        <li class="sub-nav__item">
+                            <a href="./iPhone.html">iPhone</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./samSung.html">SamSung</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./xiaomi.html">Xiaomi</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="./oppo.html">Oppo</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./gioithieu.html">GIỚI THIỆU</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./payment.html">THANH TOÁN</a>
+                </li>
+                <li class="nav-bar__item">
+                    <a class="nav-bar__item-link" href="./sitemap.html">SITEMAP</a>
+                </li>                
+            </li>
+            </ul>
+        <!-- phần bên phải bao gồm đăng nhập, đăng kí và search box -->
+        <div class="header-right">
+            <ul class="login-box">
+                <li class="login">Đăng nhập</li>
+                <li class="signup">Đăng ký</li>
+
+                <!-- form đăng ký -->
+                <div class="signup-form-wrap">
+                    <div class="form">
+                        <div class="form__header">
+                            <div class="form__header-title">
+                                <h1>Đăng ký</h1>
+                            </div>
+                            <div class="close">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="form__main">
+                            <div class="user">
+                                <div class="user-label">Tên tài khoản</div>
+                                <input type="text" class="user-input" id="user-input" placeholder="Tên tài khoản chứa ít nhất 6 ký tự" onblur="checkUser()">
+                                <span class="user-error" id="user-error"></span>
+                            </div>
+
+                            <div class="pwd">
+                                <div class="pwd-label">Mật khẩu</div>
+                                <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu chứa ít nhất 6 ký tự" onblur="checkPwd()">
+                                <span class="pwd-error" id="pwd-error"></span>
+                            </div>
+                            <div class="repwd">
+                                <div class="repwd-label">Nhập lại mật khẩu</div>
+                                <input type="password" class="repwd-input" id="repwd-input" minlength="6" placeholder="Nhập lại mật khẩu" onblur="checkRepwd()">
+                                <span class="repwd-error" id="repwd-error"></span>
+                            </div>
+                            <div class="email">
+                                <div class="email-check">Email</div>
+                                <input type="text" class="email-input" id="email-input" minlength="6" placeholder="Nhập email của bạn (Không bắt buộc)" onblur="checkEmail()">
+                                <span class="email-error" id="email-error"></span>
+                            </div>
+                       </div>
+            
+                        <div class="form__footer">
+                            <div class="switch-login-form">Đã có tài khoản?</div>
+                            <div class="footer__btn">
+                                <button class="btn-cancel">Hủy</button>
+                                <button class="btn-ok">Đăng ký</button>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+                <!-- form đăng nhập -->
+                <div class="login-form-wrap">
+                    <div class="form">
+                        <div class="form__header">
+                            <div class="form__header-title">
+                                <h1>Đăng nhập</h1>
+                            </div>
+                            <div class="close">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="form__main">
+                            <div class="user">
+                                <div class="user-label">Tên tài khoản</div>
+                                <input type="text" class="user-input" id="user-input" placeholder="Tài khoản" onblur="checkUser()">
+                                <span class="user-error" id="user-error"></span>
+                            </div>
+
+                            <div class="pwd">
+                                <div class="pwd-label">Mật khẩu</div>
+                                <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu" onblur="checkPwd()">
+                                <span class="pwd-error" id="pwd-error"></span>
+                            </div>
+                       </div>
+            
+                        <div class="form__footer">
+                            <div class="switch-signup-form">Chưa có tài khoản?</div>
+                            <div class="footer__btn">
+                                <button class="btn-cancel">Hủy</button>
+                                <button class="btn-ok">Đăng nhập</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </ul>
+
+            <!-- phần tìm kiếm -->
+            <div class="search-box">
+                <input class="search-box__input" type="text" placeholder="Tìm kiếm...">
+                <a href="" class="search-btn">
+                    <img src="../IMG/211817_search_strong_icon.png" alt="">
+                </a>
+            </div>
+            <!-- The Modal -->
+            <button id="cart" >
+                <a href="../HTML/Payment.html"> <img src="../IMG/216477_shopping_cart_icon.png" alt=""></a> <br>
+                Giỏ hàng  
+            </button>
+                      
+</header>
+<!-- main -->
+<main>
+     <img src="../IMG/5c09d4172ef5f2ababe4.jpg" alt="" class="banner">
+    <section class="wrapper">
+        <div id="motor_type">
+            <h3 class="ct_list">Sản Phẩm Nổi Bật</h3>
+            <div class="list_container">
+                <ul class="motor_list">
+                    <li class="product">
+                        <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html"><img src="../IMG/iPhone/14promax.jpeg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html" class="motor_name">iPhone 14 Pro Max</a>
+                        <p class="price">37.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                    <li class="product">
+                        <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html"><img src="../IMG/iPhone/13 pro max.png" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html" class="motor_name">iPhone 13 Pro Max</a>
+                        <p class="price">27.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                    <li class="product">
+                        <a href="./WEb/chitiet/Samsung/SamsungZFold4.html"><img src="../IMG/samsung/SS-Zfold4.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Samsung/SamsungZFold4.html" class="motor_name">SamSung Z fold 4</a>
+                        <p class="price">38.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Samsung/SamsungZFold4.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                    <li class="product">
+                        <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html"><img src="../IMG/oppo/oppo-findx5 pro.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html" class="motor_name">Oppo Findx5 Pro</a>
+                        <p class="price">29.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                </ul>
+                <br>
+                <ul class="motor_list">
+                    <li class="product">
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html"><img src="../IMG/xiaomi/xiaomi-12tpro.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html" class="motor_name">Xiaomi mi 12t Pro</a>
+                        <p class="price">17.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>       
+                    <li class="product">
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html"><img src="../IMG/xiaomi/xiaomi-12t.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html" class="motor_name">Xiaomi mi 12t</a>
+                        <p class="price">13.000.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                    <li class="product">
+                        <a href="./WEb/chitiet/Oppo/OppoReno7.html"><img src="../IMG/oppo/opporeno7.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Oppo/OppoReno7.html" class="motor_name">Oppo reno 7</a>
+                        <p class="price">9.500.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Oppo/OppoReno7.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                    <li class="product">
+                        <a href="./WEb/chitiet/Oppo/OppoReno6.html"><img src="../IMG/oppo/opporeno6.jpg" alt="" class="sample"></a>
+                        <a href="./WEb/chitiet/Oppo/OppoReno6.html" class="motor_name">Oppo reno 6</a>
+                        <p class="price">10.300.000 VNĐ</p>
+                        <a href="./WEb/chitiet/Oppo/OppoReno6.html" class="thaotac"><button class="buynow2">Mua</button></a>
+
+                    </li>
+                </ul>
+                <h4 class="ct_type">Hãng Máy</h4>
+            <br>
+            <ul class="menu">
+                <li class="menu_motor_type">
+                    <a href="./iPhone.html"><img class="type" src="../IMG/logoiPhone.png" alt=""></a>
+                    <br>
+                    <a href="./iphone.html" class="ct_name">iPhone</a>
+                </li>
+                <li class="menu_motor_type">
+                    <a href="./samSung.html"><img src="../IMG/logoSamSung.jpg" alt="" class="type"></a>
+                    <br>
+                    <a href="./samSung.html" class="ct_name">SamSung</a>
+                </li>
+                <li class="menu_motor_type">
+                    <a href="./xiaomi.html"><img src="../IMG/logoXiaomi.jpg" alt="" class="type"></a>
+                    <br>
+                    <a href="./xiaomi.html" class="ct_name">Xiaomi</a>
+                </li>
+                <li class="menu_motor_type">
+                    <a href="./oppo.html"><img src="../IMG/logoOppo.jpg" alt="" class="type"></a>
+                    <br>
+                    <a href="./oppo.html" class="ct_name">Oppo</a>
+                </li>
+            </ul>
+            </div>
+</section>
+        <!--
+                <div id="next_btn">
+            <a href="#" class="desc_show_more">Xem thêm sản phẩm
+                <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
+            </a>
+        </div>
+        -->
+    
+    </div>
+</main>
+<!-- footer -->
+<footer class="footer">
+  <div class="grid">
+      <div class="grid__row">
+          <div class="grid__column-2-4">
+              <h3 class="footer__heading">Thông Tin Liên Hệ</h3>
+              <ul class="footer-list">
+                  <li class="footer-item">
+          
+                      <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 4,
+                          Quận Gò Vấp, Thành phố Hồ Chí Minh</p>
+                  </li>
+                  <li class="footer-item"> 
+                      <p>
+                      Điện thoại:
+                      <a href="" class="footer-item__link">070.251.7993</a> 
+                      </p>
+                  </li>
+                  <li class="footer-item">
+                      <p>
+                      Email:<a href="" class="footer-item__link">Smartphonethoidai@gmail.com</a>
+                      </p>  
+                  
+                  </li>
+              </ul>
+          </div>
+          <div class="grid__column-2-4">
+              <h3 class="footer__heading">Giới thiệu</h3>
+              <ul class="footer-list">
+                  <li class="footer-item">
+                      <a href="" class="footer-item__link">Smartphonethoidai</a>
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">Tuyển dụng</a> 
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">Điều khoản</a>
+                  
+                  </li>
+              </ul>
+          </div>
+          <div class="grid__column-2-4">
+              <h3 class="footer__heading">Theo Dõi Chung Tôi</h3>
+              <ul class="footer-list">
+                  <li class="footer-item">
+                      <a href="" class="footer-item__link">
+                          <img src="../IMG/5305154_fb_facebook_facebook logo_icon.png" 
+                          width="50px"
+                          height="50px"
+                          alt="">
+                          Facebook
+                      </a>
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">
+                          <img src="../IMG/1161953_instagram_icon.png" alt=""
+                          width="50px"
+                          height="50px">
+                          Instagram
+                      </a> 
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">
+                        <img src="../IMG/7693324_telegram_social media_logo_messenger_icon.png" alt=""
+                        width="50px"
+                        height="50px">
+                          Telegram
+                      </a>
+                  
+                  </li>
+              </ul>
+          </div>
+          <div class="grid__column-2-4">
+              <h3 class="footer__heading">Hỗ Trợ Khách Hàng</h3>
+              <ul class="footer-list">
+                  <li class="footer-item">
+                      <a href="" class="footer-item__link">Trung Tâm Trợ Giúp</a>
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">Hướng Dẫn Trả Góp</a> 
+                  </li>
+                  <li class="footer-item">  
+                      <a href="" class="footer-item__link">Chính Sách Bảo Hành</a>
+                  
+                  </li>
+                  <div class="footer__logo">
+                      <img src="../IMG/4550868_calling_chat_chatting_viber_video calling_icon.png" alt="#" class="logo_BoCT"
+                      height="50px"
+                      width="65px">         
+              </ul>
+          </div>
+      </div>
+      </div>
+      <div class="footer__bottom">
+          <div class="grid">
+              <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty Smartphonethoidai</p>
+          </div>
+      </div>
+</footer>
+</body>
+</html>

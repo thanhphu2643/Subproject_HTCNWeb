@@ -22,24 +22,6 @@ body {
     --black-transparent: rgba(0, 0, 0, .5);
 }
 
-/* 
-dùng cho animation
-cách dùng: 
-    animation: growth time style;
-ví dụ: 
-    animation: growth .2s ease;
-*/
-@keyframes growth {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 * {
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
@@ -76,7 +58,7 @@ ul {
     z-index: 2;
 }
 
-/* phần navigation bar, bao gồm: trang chủ, sản phẩm, giới thiệu, hãng xe */
+/* phần navigation bar, bao gồm: trang chủ, sản phẩm, giới thiệu*/
 .nav-bar__list {
     margin: 0;
     display: flex;
@@ -259,129 +241,11 @@ ul {
     color: white;
 }
 
-/* phần form đăng nhập và đăng ký */
-.signup-form-wrap, .login-form-wrap {
-    position: fixed;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--black-transparent);
-    z-index: 3;
-    display: none;
-}
-
-.form {
-    background-color: white;
-    width: 600px;
-    border-radius: 10px;
-    padding: 36px;
-    margin: 10% auto auto;
-    animation: growth .55s ease-in-out;
-}
-
-.form__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form__header-title h1 {
-    color: var(--primary-color-2);
-    margin: 0;
-    cursor: default;
-}
-
-.close {
-    font-size: 40px;
-    height: 40px;
-}
-
-.form__main {
-    margin: 0 20px;
-}
-
-.form__main span {
-    font-size: 12px;
-    color: var(--primary-color);
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-}
-
-.user, .pwd, .repwd {
-    position: relative;
-}
-
-.user-label, .pwd-label, .repwd-label {
-    color: #333;
-    margin: 20px 0 4px;
-}
-
-.user-input, .pwd-input, .repwd-input {
-    border-radius: 5px;
-    width: 100%;
-    height: 36px;
-    border: 1px solid #333;
-    padding: 0 12px;
-    font-size: 14px;
-    outline: none;
-}
-
-.form__footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 32px 20px 0;
-}
-
-.switch-signup-form, .switch-login-form {
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--primary-color-2);
-}
-
-.footer_btn {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btn-cancel, .btn-ok {
-    min-width: 100px;
-    border-radius: 5px;
-    height: 36px;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.btn-cancel {
-    border: 1px solid #333;
-}
-
-.btn-ok {
-    border: none;
-    color: white;
-    background-color: var(--primary-color-2);
-    margin-left: 20px;
-}
-
-.close:hover {
-    color: var(--primary-color-2);
-    cursor: pointer;
-}
-
-.switch-signup-form:hover, .switch-login-form:hover, .btn-cancel:hover, .btn-ok:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
 /* phần tìm kiếm */
 .search-box {
     border: none;
     border-radius: 5px;
-    margin-top: 8px;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     background-color: white;

@@ -7,6 +7,9 @@
   <title>Smartphonethoidai</title>
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="../CSS/style2.css">
+  <link rel="stylesheet" href="../CSS/bootstrap.css">
+  <script src="../Js/jquery-3.6.4.js"></script>
+  <script src="../Js/bootstrap.js"></script>
 </head>
 <body>
   <header>
@@ -52,90 +55,8 @@
         <!-- phần bên phải bao gồm đăng nhập, đăng kí và search box -->
         <div class="header-right">
             <ul class="login-box">
-                <li class="login">Đăng nhập</li>
-                <li class="signup">Đăng ký</li>
-
-                <!-- form đăng ký -->
-                <div class="signup-form-wrap">
-                    <div class="form">
-                        <div class="form__header">
-                            <div class="form__header-title">
-                                <h1>Đăng ký</h1>
-                            </div>
-                            <div class="close">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="form__main">
-                            <div class="user">
-                                <div class="user-label">Tên tài khoản</div>
-                                <input type="text" class="user-input" id="user-input" placeholder="Tên tài khoản chứa ít nhất 6 ký tự" onblur="checkUser()">
-                                <span class="user-error" id="user-error"></span>
-                            </div>
-
-                            <div class="pwd">
-                                <div class="pwd-label">Mật khẩu</div>
-                                <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu chứa ít nhất 6 ký tự" onblur="checkPwd()">
-                                <span class="pwd-error" id="pwd-error"></span>
-                            </div>
-                            <div class="repwd">
-                                <div class="repwd-label">Nhập lại mật khẩu</div>
-                                <input type="password" class="repwd-input" id="repwd-input" minlength="6" placeholder="Nhập lại mật khẩu" onblur="checkRepwd()">
-                                <span class="repwd-error" id="repwd-error"></span>
-                            </div>
-                            <div class="email">
-                                <div class="email-check">Email</div>
-                                <input type="text" class="email-input" id="email-input" minlength="6" placeholder="Nhập email của bạn (Không bắt buộc)" onblur="checkEmail()">
-                                <span class="email-error" id="email-error"></span>
-                            </div>
-                       </div>
-            
-                        <div class="form__footer">
-                            <div class="switch-login-form">Đã có tài khoản?</div>
-                            <div class="footer__btn">
-                                <button class="btn-cancel">Hủy</button>
-                                <button class="btn-ok">Đăng ký</button>
-                            </div>
-                        </div>
-            
-                    </div>
-                </div>
-
-                <!-- form đăng nhập -->
-                <div class="login-form-wrap">
-                    <div class="form">
-                        <div class="form__header">
-                            <div class="form__header-title">
-                                <h1>Đăng nhập</h1>
-                            </div>
-                            <div class="close">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="form__main">
-                            <div class="user">
-                                <div class="user-label">Tên tài khoản</div>
-                                <input type="text" class="user-input" id="user-input" placeholder="Tài khoản" onblur="checkUser()">
-                                <span class="user-error" id="user-error"></span>
-                            </div>
-
-                            <div class="pwd">
-                                <div class="pwd-label">Mật khẩu</div>
-                                <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu" onblur="checkPwd()">
-                                <span class="pwd-error" id="pwd-error"></span>
-                            </div>
-                       </div>
-            
-                        <div class="form__footer">
-                            <div class="switch-signup-form">Chưa có tài khoản?</div>
-                            <div class="footer__btn">
-                                <button class="btn-cancel">Hủy</button>
-                                <button class="btn-ok">Đăng nhập</button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                <li class="login" data-target="#frmdn" data-toggle="modal">Đăng nhập</li>
+                <li class="signup" data-target="#frmdk" data-toggle="modal">Đăng ký</li> 
             </ul>
 
             <!-- phần tìm kiếm -->
@@ -156,65 +77,65 @@
 <main>
      <img src="../IMG/5c09d4172ef5f2ababe4.jpg" alt="" class="banner">
     <section class="wrapper">
-        <div id="motor_type">
+        <div id="type">
             <h3 class="ct_list">Sản Phẩm Nổi Bật</h3>
             <div class="list_container">
-                <ul class="motor_list">
+                <ul class="phone_list">
                     <li class="product">
                         <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html"><img src="../IMG/iPhone/14promax.jpeg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html" class="motor_name">iPhone 14 Pro Max</a>
+                        <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html" class="phone_name">iPhone 14 Pro Max</a>
                         <p class="price">37.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/iPhone/iPhone14ProMax.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                     <li class="product">
                         <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html"><img src="../IMG/iPhone/13 pro max.png" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html" class="motor_name">iPhone 13 Pro Max</a>
+                        <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html" class="phone_name">iPhone 13 Pro Max</a>
                         <p class="price">27.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/iPhone/iPhone13ProMax.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                     <li class="product">
                         <a href="./WEb/chitiet/Samsung/SamsungZFold4.html"><img src="../IMG/samsung/SS-Zfold4.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Samsung/SamsungZFold4.html" class="motor_name">SamSung Z fold 4</a>
+                        <a href="./WEb/chitiet/Samsung/SamsungZFold4.html" class="phone_name">SamSung Z fold 4</a>
                         <p class="price">38.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/Samsung/SamsungZFold4.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                     <li class="product">
                         <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html"><img src="../IMG/oppo/oppo-findx5 pro.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html" class="motor_name">Oppo Findx5 Pro</a>
+                        <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html" class="phone_name">Oppo Findx5 Pro</a>
                         <p class="price">29.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/Oppo/OppoFindX5Pro.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                 </ul>
                 <br>
-                <ul class="motor_list">
+                <ul class="phone_list">
                     <li class="product">
                         <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html"><img src="../IMG/xiaomi/xiaomi-12tpro.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html" class="motor_name">Xiaomi mi 12t Pro</a>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html" class="phone_name">Xiaomi mi 12t Pro</a>
                         <p class="price">17.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/Xiaomi/Xiaomi12TPro.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>       
                     <li class="product">
                         <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html"><img src="../IMG/xiaomi/xiaomi-12t.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html" class="motor_name">Xiaomi mi 12t</a>
+                        <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html" class="phone_name">Xiaomi mi 12t</a>
                         <p class="price">13.000.000 VNĐ</p>
                         <a href="./WEb/chitiet/Xiaomi/Xiaomi12T.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                     <li class="product">
                         <a href="./WEb/chitiet/Oppo/OppoReno7.html"><img src="../IMG/oppo/opporeno7.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Oppo/OppoReno7.html" class="motor_name">Oppo reno 7</a>
+                        <a href="./WEb/chitiet/Oppo/OppoReno7.html" class="phone_name">Oppo reno 7</a>
                         <p class="price">9.500.000 VNĐ</p>
                         <a href="./WEb/chitiet/Oppo/OppoReno7.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
                     </li>
                     <li class="product">
                         <a href="./WEb/chitiet/Oppo/OppoReno6.html"><img src="../IMG/oppo/opporeno6.jpg" alt="" class="sample"></a>
-                        <a href="./WEb/chitiet/Oppo/OppoReno6.html" class="motor_name">Oppo reno 6</a>
+                        <a href="./WEb/chitiet/Oppo/OppoReno6.html" class="phone_name">Oppo reno 6</a>
                         <p class="price">10.300.000 VNĐ</p>
                         <a href="./WEb/chitiet/Oppo/OppoReno6.html" class="thaotac"><button class="buynow2">Mua</button></a>
 
@@ -223,22 +144,22 @@
                 <h4 class="ct_type">Hãng Máy</h4>
             <br>
             <ul class="menu">
-                <li class="menu_motor_type">
+                <li class="menu_phone_type">
                     <a href="./iPhone.html"><img class="type" src="../IMG/logoiPhone.png" alt=""></a>
                     <br>
                     <a href="./iphone.html" class="ct_name">iPhone</a>
                 </li>
-                <li class="menu_motor_type">
+                <li class="menu_phone_type">
                     <a href="./samSung.html"><img src="../IMG/logoSamSung.jpg" alt="" class="type"></a>
                     <br>
                     <a href="./samSung.html" class="ct_name">SamSung</a>
                 </li>
-                <li class="menu_motor_type">
+                <li class="menu_phone_type">
                     <a href="./xiaomi.html"><img src="../IMG/logoXiaomi.jpg" alt="" class="type"></a>
                     <br>
                     <a href="./xiaomi.html" class="ct_name">Xiaomi</a>
                 </li>
-                <li class="menu_motor_type">
+                <li class="menu_phone_type">
                     <a href="./oppo.html"><img src="../IMG/logoOppo.jpg" alt="" class="type"></a>
                     <br>
                     <a href="./oppo.html" class="ct_name">Oppo</a>
@@ -355,5 +276,95 @@
           </div>
       </div>
 </footer>
+<!-- form đăng ký -->
+<div class="modal" id="frmdk">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="text-center">ĐĂNG KÝ</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+               <form action="">
+                <div class="form-group row">
+                    <label for="" class="col-2">Tên đăng nhập</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Mật khẩu</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Nhập lại mật khẩu</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Email</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row"> 
+                    <div class="col-12 text-center">
+                      <button class="btn btn-dark" id="btn" type="button">
+                        Đăng ký
+                      </button>
+                      <button class="btn btn-dark">Hủy</button>
+                    </div>
+                </div>
+               </form>
+            </div>
+            <div class="modal-footer">21097801_NguyenThanhPhu</div>
+        </div>
+    </div>
+</div>
+<!-- form đăng nhập -->
+<div class="modal" id="frmdn">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="text-center">ĐĂNG NHẬP</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group row">
+                        <label for="" class="col-2">Tên đăng nhập</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-2">Mật khẩu</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <a href="" class="col-3"><label for="">Quên mật khẩu?</label></a>
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col-12 text-center">
+                          <button class="btn btn-dark" id="btn" type="button">
+                            Đăng nhập
+                          </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">21097801_NguyenThanhPhu</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

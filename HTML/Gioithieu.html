@@ -7,6 +7,9 @@
     <title>Gioithieu</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <script src="../Js/jquery-3.6.4.js"></script>
+    <script src="../Js/bootstrap.js"></script>
 </head>
 <body>
     <header>
@@ -54,97 +57,15 @@
             <div class="header-right">
 
                 <ul class="login-box">
-                    <li class="login">Đăng nhập</li>
-                    <li class="signup">Đăng ký</li>
-
-                    <!-- form đăng ký -->
-                    <div class="signup-form-wrap">
-                        <div class="form">
-                            <div class="form__header">
-                                <div class="form__header-title">
-                                    <h1>Đăng ký</h1>
-                                </div>
-                                <div class="close">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="form__main">
-                                <div class="user">
-                                    <div class="user-label">Tên tài khoản</div>
-                                    <input type="text" class="user-input" id="user-input" placeholder="Tên tài khoản chứa ít nhất 3 ký tự" onblur="checkUser()">
-                                    <span class="user-error" id="user-error"></span>
-                                </div>
-
-                                <div class="pwd">
-                                    <div class="pwd-label">Mật khẩu</div>
-                                    <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu chứa ít nhất 6 ký tự" onblur="checkPwd()">
-                                    <span class="pwd-error" id="pwd-error"></span>
-                                </div>
-                
-                                <div class="repwd">
-                                    <div class="repwd-label">Nhập lại mật khẩu</div>
-                                    <input type="password" class="repwd-input" id="repwd-input" minlength="6" placeholder="Nhập lại mật khẩu" onblur="checkRepwd()">
-                                    <span class="repwd-error" id="repwd-error"></span>
-                                </div>  <div class="email">
-                                    <div class="email-check">Email</div>
-                                    <input type="text" class="email-input" id="email-input" minlength="6" placeholder="Nhập email của bạn (Không bắt buộc)" onblur="checkRepwd()">
-                                    <span class="email-error" id="email-error"></span>
-                                </div>
-
-                           </div>
-                
-                            <div class="form__footer">
-                                <div class="switch-login-form">Đã có tài khoản?</div>
-                                <div class="footer__btn">
-                                    <button class="btn-cancel">Hủy</button>
-                                    <button class="btn-ok">Đăng ký</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- form đăng nhập -->
-                    <div class="login-form-wrap">
-                        <div class="form">
-                            <div class="form__header">
-                                <div class="form__header-title">
-                                    <h1>Đăng nhập</h1>
-                                </div>
-                                <div class="close">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="form__main">
-                                <div class="user">
-                                    <div class="user-label">Tên tài khoản</div>
-                                    <input type="text" class="user-input" id="user-input" placeholder="Tài khoản" onblur="checkUser()">
-                                    <span class="user-error" id="user-error"></span>
-                                </div>
-
-                                <div class="pwd">
-                                    <div class="pwd-label">Mật khẩu</div>
-                                    <input type="password" class="pwd-input" id="pwd-input" placeholder="Mật khẩu" onblur="checkPwd()">
-                                    <span class="pwd-error" id="pwd-error"></span>
-                                </div>
-                           </div>
-                
-                            <div class="form__footer">
-                                <div class="switch-signup-form">Chưa có tài khoản?</div>
-                                <div class="footer__btn">
-                                    <button class="btn-cancel">Hủy</button>
-                                    <button class="btn-ok">Đăng nhập</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
+                    <li class="login" data-target="#frmdn" data-toggle="modal">Đăng nhập</li>
+                    <li class="signup" data-target="#frmdk" data-toggle="modal">Đăng ký</li>
                 </ul>
 
                 <!-- phần tìm kiếm -->
                 <div class="search-box">
                     <input class="search-box__input" type="text" placeholder="Tìm kiếm">
                     <a href="" class="search-btn">
-                        <ion-icon name="search-outline"></ion-icon>
+                        <img src="../IMG/211817_search_strong_icon.png" alt="">
                     </a>
                 </div>
             </div>
@@ -256,5 +177,95 @@
 
             </div>
     </footer>
+    <!-- form đăng ký -->
+<div class="modal" id="frmdk">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="text-center">ĐĂNG KÝ</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+               <form action="">
+                <div class="form-group row">
+                    <label for="" class="col-2">Tên đăng nhập</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Mật khẩu</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Nhập lại mật khẩu</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-2">Email</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row"> 
+                    <div class="col-12 text-center">
+                      <button class="btn btn-dark" id="btn" type="button">
+                        Đăng ký
+                      </button>
+                      <button class="btn btn-dark">Hủy</button>
+                    </div>
+                </div>
+               </form>
+            </div>
+            <div class="modal-footer">21097801_NguyenThanhPhu</div>
+        </div>
+    </div>
+</div>
+<!-- form đăng nhập -->
+<div class="modal" id="frmdn">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-12">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="text-center">ĐĂNG NHẬP</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group row">
+                        <label for="" class="col-2">Tên đăng nhập</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-2">Mật khẩu</label>
+                        <div class="col-10">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <a href="" class="col-3"><label for="">Quên mật khẩu?</label></a>
+                    </div>
+                    <div class="form-group row"> 
+                        <div class="col-12 text-center">
+                          <button class="btn btn-dark" id="btn" type="button">
+                            Đăng nhập
+                          </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">21097801_NguyenThanhPhu</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
